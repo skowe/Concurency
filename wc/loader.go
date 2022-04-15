@@ -19,7 +19,7 @@ func getFile(path string) *os.File {
 // Send all bytes read from file in path to channel c
 // use STDIN if file is not specified
 // Raise fatal error if any reading fails
-// Return the number of bytes read from the file/STDIN
+// Return the number of bytes read from file/STDIN
 func LoadFile(path string, c chan []byte) int {
 	var buf []byte
 	var err error
