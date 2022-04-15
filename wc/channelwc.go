@@ -58,7 +58,7 @@ func counter(lines, words *int, lineFlag, wordFlag, doneFlag <-chan bool) {
 	}
 }
 
-// Implements loginc for counting words
+// Implements logic for counting words
 // When a condition for a word is met send a bool flag on the channel to increment word count
 func countWords(b []byte, wordFlag chan<- bool, wg *sync.WaitGroup) {
 	defer func() {
@@ -78,7 +78,7 @@ func countWords(b []byte, wordFlag chan<- bool, wg *sync.WaitGroup) {
 	}
 }
 
-// Implements loginc for counting lines
+// Implements logic for counting lines
 // When a condition for a line is met send a bool flag on the channel to increment line count
 func countLines(b []byte, lineFlag chan<- bool, wg *sync.WaitGroup) {
 	defer func() {
